@@ -1,0 +1,21 @@
+$light-color: white;
+$dark-color: #adaaaa;
+$dark-color-background: #242424;
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@container (max-width: 600px) {
+    .container {
+        &-grid {
+            flex-direction: column;
+            &-item {
+                width: 100%;
+                min-width: 100% !important;
+            }
+        }
+    }
+}
