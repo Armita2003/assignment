@@ -1,0 +1,88 @@
+//Minimum Sizes for the Inputs
+
+$first-item-min-width: 250px;
+$second-item-min-width: 350px;
+$third-item-min-width: 200px;
+
+// To check which width is the Smallest
+$checked-min-width: min(
+    $first-item-min-width,
+    $second-item-min-width,
+    $third-item-min-width
+);
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background: $light-color;
+    z-index: 1;
+    transition: 0.3s;
+    color: black;
+    margin: 0;
+    padding: 10px;
+    padding-top: 25px;
+    overflow-x: hidden;
+}
+
+.container {
+    container-type: inline-size;
+    &-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        &-item {
+            flex-grow: 1;
+            flex-shrink: 0;
+
+            min-width: $checked-min-width;
+            height: 80px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: calc(var(--base-font-size) * 0.5 * var(--pixel-ratio));
+            justify-content: space-between;
+        }
+
+        .item1 {
+            min-width: $first-item-min-width;
+            border: 2px solid var(--input-danger-border);
+
+            &:focus {
+                border-color: darken(var(--input-danger-border), 100%);
+                outline: none;
+            }
+        }
+
+        .item2 {
+            min-width: $second-item-min-width;
+            border: 2px solid var(--input-success-border);
+            &:focus {
+                border-color: var(--input-success-border);
+                outline: none;
+            }
+        }
+
+        .item3 {
+            min-width: $third-item-min-width;
+            border: 2px solid var(--input-pink-border);
+            &:focus {
+                border-color: var(--input-pink-border);
+                outline: none;
+            }
+        }
+        .item4 {
+            border: 2px solid var(--input-warning-border);
+            &:focus {
+                border-color: var(--input-warning-border);
+                outline: none;
+            }
+        }
+        .item5 {
+            border: 2px solid var(--input-dark-border);
+            &:focus {
+                border-color: var(--input-dark-border);
+                outline: none;
+            }
+        }
+    }
+}
