@@ -6,7 +6,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --input-dark-border: black;
+    --input-success-border: #28a745;
+    --input-danger-border: #dc3545;
+    --input-warning-border: #ffc107;
+    --input-pink-border: #950a70;
+    --base-font-size: 16px;
+}
 body {
+    font-size: calc(var(--base-font-size) * var(--pixel-ratio));
     margin: 0;
     width: 100vw;
     height: 100vh;
